@@ -1,6 +1,4 @@
-# Project---4
-
-# Toronto Property Search Dashboard
+# Project-4 - Milwaukee Property Search Dashboard
 
 ## Overview
 Project Description: The goal of this project is to provide users with an interactive dashboard for Milwaukee property listings that provides property price predictions using machine learning concepts. 
