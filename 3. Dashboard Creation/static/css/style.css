@@ -13,6 +13,7 @@ body,
 html {
   height: 700px;
   width: 100%;
+  zoom: 93%;
 }
 .info {
   padding: 6px 8px;
@@ -60,7 +61,7 @@ html {
 
 #property-table tbody, #propertyDetails tbody {
   display: block;
-  height: 400px; /* Adjust height as needed */
+  height: 200px; /* Adjust height as needed */
   overflow-y: auto;
 }
 
