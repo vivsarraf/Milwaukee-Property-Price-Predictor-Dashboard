@@ -16,6 +16,13 @@ These instructions will get you a copy of the project up and running on your loc
 To run this project, please set up your environment and run the files in the order of how the folders are number. The contents of the repo are outlined below:
 ```
 .
+├── 1. Data Cleaning
+├── Resources
+|   ├── 2013_to_2023_property-sales-data.csv
+|   └── clean_property_data_SQL2                                       
+└── Final_SQL_data_cleaning_process.ipynb     
+
+
 ├── Resources
 |   └── 2023 US Property Data
 |       ├── cleaned_df.csv                                 # Cleaned 2023 United States house listings CSV extracted from Zillow
