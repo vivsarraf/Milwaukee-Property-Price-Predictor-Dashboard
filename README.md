@@ -121,7 +121,7 @@ Initially, a neural network with 2 layers and an output layer was used, with the
 
 Afterwards, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
 
-Our last attempt involved 
+Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priorty were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occured when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
 
 <!-- Explain what these tests test and why
 
