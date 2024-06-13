@@ -44,8 +44,8 @@ To run this project, please set up your environment and run the files in the ord
 |   └── Data Cleaning and MongoDB Import                            # Jupyter ntoebook file used for importing data and cleaning before MongoDB creation
 ├── Images
 |   ├── Architecture diagram                                        # PNG image about project architecture
-|   ├── coafficient - p value
-|   └── feature importance
+|   ├── coafficient - p value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
+|   └── feature importance                                          
 ├── README.md                                                       # README file describing purpose, repo contents, setup requirements, and architecture of the project
 └── requirements.txt                                                # List of required libraries to install for app to work
 ```
@@ -73,8 +73,6 @@ Execute 'conda env list' to confirm whether the 'milwaukee_env' environment has 
 Execute 'conda list' to see the packages already loaded into this environment.
 Execute 'pip install -r requirements.txt' to install all the packages within the requriements.txt file. 
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -106,49 +104,80 @@ In the Random Forest model, feature importance tells us which features are the m
 ### Importance in Modeling
 
 Understanding coefficients and p-values in our linear regression model helps us focus on the most important features and remove the less important ones, making our model better and easier to understand. Similarly, knowing the feature importance in the Random Forest model helps us see which features are most influential. Together, these insights ensure we use the most relevant data for predictions, making our model more accurate and reliable.
+
 ### Break down into end to end tests
 
-Explain what these tests test and why
+With over 60 trials, several different models were tested in an attempt to obtain the best model accuracy and details on these models can be found below. 
+
+| Model Information  | Accuracies |
+| ------------- | ------------- |
+| Neural Network - 2 layers ("relu" activation; 32 nodes) and 1 output layer ("linear" activation) | Accuracy 0.0002  |
+| LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
+| Random Forest Regression | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
+
+Initially, a neural network with 2 layers and an output layer was used, with the final output activation function being set as "sigmoid." However, after some guidance and further research, it was understood that the "sigmoid" activation function should only be used for classification problems and cannot be used with forecasting problems, which explains the accuracy of 0%. After changing the output layer activation function to "linear," an accuracy of 0.02% was achieved  - not even close to the desired target performance of at least 75%.
+
+Afterwards, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
+
+Our last attempt involved 
+
+<!-- Explain what these tests test and why
 
 ```
 Give an example
-```
+``` -->
 
 ### And coding style tests
 
-Explain what these tests test and why
+<!-- Explain what these tests test and why
 
 ```
 Give an example
-```
+``` -->
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+After running the code files in VSCode, Google Colab, or any other tool of choice, open the index.html file in your browser to view and interact with the final User Interface. 
+<!-- Add additional notes about how to deploy this on a live system -->
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+- Python
+- SQLite
+- MongoDB
+- JavaScript
+- HTML & CSS
+
+## Data Sources
+
+Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://data.milwaukee.gov/dataset/property-sales-data"> Milwaukee Open Data - City of Milwaukee Open Data Portal</a>. 
+
+2023 United States House Listings: Zillow Extract - taken from <a href= "https://www.kaggle.com/datasets/febinphilips/us-house-listings-2023"> Kaggle</a>. 
+
+<!-- * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds -->
 
-## Contributing
+<!-- ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. -->
 
-## Versioning
+<!-- ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Elle Behnia** - *Full project cycle* - [Elle's Github](https://github.com/ElleNaazB)
+* **Navneet Kaur** - *Full project cycle* - [Elle's Github](https://github.com/Navneet-Kaur-DA)
+* **Vivek Sarraf** - *Full project cycle* - [Elle's Github](https://github.com/vivsarraf)
+* **Ajunjee Selvam** - *Full project cycle* - [Elle's Github](https://github.com/ajunjee-selvam)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+<!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
-## License
+<!-- ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details -->
 
 ## Acknowledgments
 
@@ -156,8 +185,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
 
-## Data Sources
 
-Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://data.milwaukee.gov/dataset/property-sales-data"> Milwaukee Open Data - City of Milwaukee Open Data Portal</a>. 
-
-2023 United States House Listings: Zillow Extract - taken from <a href= "https://www.kaggle.com/datasets/febinphilips/us-house-listings-2023"> Kaggle</a>. 
