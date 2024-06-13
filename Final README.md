@@ -73,8 +73,34 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+### Coefficients Summary
 
+**Definition**: In simple terms, a coefficient shows how much the sale price of a house changes when a feature (like the number of bedrooms or the size of the house) changes by one unit.
+
+The coefficients from our linear regression model tell us how different features affect the sale price. Positive numbers mean the feature increases the sale price, while negative numbers mean it decreases it. For example, the coefficient for 'finishedsqft' (size of the house) is 77.37, meaning that for every extra square foot, the price goes up by $77. Meanwhile, 'style_cottage' has a coefficient of -38387.13, meaning houses with this style tend to sell for $38,387 less.
+
+### P-Values
+
+**Definition**: A p-value helps us understand if a feature’s effect on the sale price is real or just by chance. Lower numbers mean it’s more likely to be a real effect.
+
+P-values help us see which features really matter for predicting the sale price. If a feature has a low p-value (usually less than 0.05), it means this feature is probably important. For example, the feature 'finishedsqft' has a very low p-value, showing that its impact on the sale price is significant.
+
+<p align="center">
+  <img src="https://github.com/vivsarraf/Project-4/blob/main/images/coafficient%20-%20p%20value.png" style="width: 500px; height: auto;">
+</p>
+
+### Feature Importance
+
+**Definition**: Feature importance shows how much each feature helps in predicting the sale price. Higher values mean the feature is more important.
+
+In the Random Forest model, feature importance tells us which features are the most useful for predicting the sale price. It is calculated by seeing how much each feature reduces uncertainty in the model. For example, 'finishedsqft' is the most important feature, followed by 'year_built' and 'lotsize'. This means these features are key to predicting how much a house will sell for.
+<p align="center">
+ <img src="https://github.com/vivsarraf/Project-4/blob/main/images/feature%20importance.png?raw=true" style="width: 850px; height: auto;">
+</p>
+
+### Importance in Modeling
+
+Understanding coefficients and p-values in our linear regression model helps us focus on the most important features and remove the less important ones, making our model better and easier to understand. Similarly, knowing the feature importance in the Random Forest model helps us see which features are most influential. Together, these insights ensure we use the most relevant data for predictions, making our model more accurate and reliable.
 ### Break down into end to end tests
 
 Explain what these tests test and why
