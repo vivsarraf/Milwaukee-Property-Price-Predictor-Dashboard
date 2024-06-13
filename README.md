@@ -139,7 +139,7 @@ Give an example
 
 ## Deployment
 
-After running the code files in VSCode, Google Colab, or any other tool of choice, open the index.html file in your browser to view and interact with the final User Interface. 
+After running the code files in VSCode, Google Colab, or any other tool of choice, run 'python app.py' in the terminal to view and interact with the final User Interface - the dashboard should be found at 'http://127.0.0.1:5000/'. 
 <!-- Add additional notes about how to deploy this on a live system -->
 
 ## Built With
