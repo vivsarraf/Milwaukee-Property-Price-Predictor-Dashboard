@@ -142,8 +142,8 @@ function addPropertyMarkers(data) {
     // Add the markers to the markers array 
     markers.push(marker);
     // Add the property information to be shown in the pop-up when a marker is clicked
-    marker.bindPopup("<b>" + "Address: " + "</b>" + property.address + "<br>" + "<b>" + "City: " + "</b>" + property.city + "<br>" + "<b>" + "Bedrooms: " + "</b>" + property.bedroom + 
-                    "<br>" + "<b>" + "Price: " + "</b>" + property.estimate_list_price + "<br>" + "<b>" + "Construction Year: " + "</b>" + property.construction_year);
+    marker.bindPopup("<b>" + "Address: " + "</b>" + property.address + "<br>" + "<b>" + "City: " + "</b>" + property.city + "<br>" + "<b>" + "Bedrooms: " + "</b>" + property.bdrms + 
+                    "<br>" +  "<b>" + "Construction Year: " + "</b>" + property.year_built  + "<br>" + "<b>" + "Price: " + "</b>" + property.price);
   }
 }
 
@@ -176,8 +176,8 @@ function addAllPropertyMarkers(data) {
     // Add the property information to be shown in the pop-up when a marker is clicked
     // Add the markers to the All Properties layer
     var propertyMarker = L.marker([lat, long],{icon: purpleIcon}).addTo(layers.AllProperties); 
-    propertyMarker.bindPopup("<b>" + "Address: " + "</b>" + property.address + "<br>" + "<b>" + "City: " + "</b>" + property.city + "<br>" + "<b>" + "Bedrooms: " + "</b>" + property.bedroom + 
-                    "<br>" + "<b>" + "Price: " + "</b>" + property.estimate_list_price + "<br>" + "<b>" + "Construction Year: " + "</b>" + property.construction_year);
+    propertyMarker.bindPopup("<b>" + "Address: " + "</b>" + property.address + "<br>" + "<b>" + "City: " + "</b>" + property.city + "<br>" + "<b>" + "Bedrooms: " + "</b>" + property.bdrms + 
+                    "<br>" +  "<b>" + "Construction Year: " + "</b>" + property.year_built  + "<br>" + "<b>" + "Price: " + "</b>" + property.price);
   }
 }
 
