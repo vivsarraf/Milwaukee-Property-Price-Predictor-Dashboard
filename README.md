@@ -73,6 +73,8 @@ Execute 'conda env list' to confirm whether the 'milwaukee_env' environment has 
 Execute 'conda list' to see the packages already loaded into this environment.
 Execute 'pip install -r requirements.txt' to install all the packages within the requriements.txt file. 
 ```
+## Project Architecture
+![Architecture - Milwaukee Property Listings Dashboard](<Images/Architecture - Milwaukee Property Listings Dashboard.jpg>)
 
 ## Running the tests
 
@@ -169,9 +171,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Elle Behnia** - *Full project cycle* - [Elle's Github](https://github.com/ElleNaazB)
-* **Navneet Kaur** - *Full project cycle* - [Elle's Github](https://github.com/Navneet-Kaur-DA)
-* **Vivek Sarraf** - *Full project cycle* - [Elle's Github](https://github.com/vivsarraf)
-* **Ajunjee Selvam** - *Full project cycle* - [Elle's Github](https://github.com/ajunjee-selvam)
+* **Navneet Kaur** - *Full project cycle* - [Navneet's Github](https://github.com/Navneet-Kaur-DA)
+* **Vivek Sarraf** - *Full project cycle* - [Vivek's Github](https://github.com/vivsarraf)
+* **Ajunjee Selvam** - *Full project cycle* - [Ajunjee's Github](https://github.com/ajunjee-selvam)
 
 <!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
 
