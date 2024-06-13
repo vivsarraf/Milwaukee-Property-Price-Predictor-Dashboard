@@ -112,10 +112,8 @@ With over 60 trials, several different models were tested in an attempt to obtai
 | Model Information  | Accuracies |
 | ------------- | ------------- |
 | Neural Network - 2 layers ("relu" activation; 32 nodes) and 1 output layer ("linear" activation) | Accuracy 0.0002  |
-| LinearRegression  | Accuracy 0.6007207053344369; 
-Mean Squared Error: 3657767974.0856624 |
-| Random Forest Regression | Accuracy 0.8365494245555989; 
-Mean Squared Error: 1497358586.317818 |
+| LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
+| Random Forest Regression | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
 
 Initially, a neural network with 2 layers and an output layer was used, with the final output activation function being set as "sigmoid." However, after some guidance and further research, it was understood that the "sigmoid" activation function should only be used for classification problems and cannot be used with forecasting problems, which explains the accuracy of 0%. After changing the output layer activation function to "linear," an accuracy of 0.02% was achieved  - not even close to the desired target performance of at least 75%.
 
