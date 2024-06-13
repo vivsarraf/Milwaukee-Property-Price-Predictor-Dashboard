@@ -24,7 +24,7 @@ let baseMaps = {
 // Create the map with our layers.
 let map = L.map("map", {
   //Center around Toronto and set zoom
-  center: [43.70, -79.3832],
+  center: [43.0389, -87.9065],
   zoom: 11.5,
   layers: [
     streetmap,
@@ -39,9 +39,6 @@ streetmap.addTo(map);
 
 // Create a control for toggling our layers on and off, and add our overlays to it.
 let overlays = {
-  "Stations": layers.Stations,
-  "Attractions": layers.Attractions,
-  "Schools": layers.Schools,
   "All Properties": layers.AllProperties
 };
 // Add the layer control to our map.
@@ -86,14 +83,26 @@ var greenIcon = new L.Icon({
 function fetchProperties(filters) {
   console.log(filters)
   removeOverlayLayers()
+  // Initialize the filter object
+  // let filterObj = {};
+
+  // // Validate and add the bedroom filter
+  // if (filters["bdrms"]) {
+  //   const bdrms = parseInt(filters["bdrms"]);
+  //   if (!isNaN(bdrms)) {
+  //     filterObj['bdrms'] = {'$gte': bdrms};
+  //   } else {
+  //     console.error('Invalid number of bedrooms:', filters["bdrms"]);
+  //   }
+  // }
   // Make a request to the Flask server to get properties data
-  fetch('/api/PropertyListings', {
+  fetch('/api/PropertyListingsMilwaukee', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({'bedroom': {'$gte': parseInt(filters["bedroom"])}})
+    body: JSON.stringify({'bdrms': {'$gte': parseInt(filters["bdrms"])}})
     // 'bathroom_full': {'$gte': parseInt(filters["bathroom_full"])}
   }) 
     // Parse the response as JSON
@@ -172,19 +181,19 @@ function addAllPropertyMarkers(data) {
   }
 }
 
-// Create function to fetch school data from the Flask App
-function fetchSchools() {
-  // Make a request to the Flask server to get the schools data
-  fetch('/api/toronto_schools') 
-    // Parse the response as JSON
-    .then(response => response.json())
-    .then(data => {
-      // Call the function to add markers for the schools data
-      addSchoolMarkers(data); 
-    })
-    // Logs errors, if any
-    .catch(error => console.error('Error fetching data:', error)); 
-}
+// // Create function to fetch school data from the Flask App
+// function fetchSchools() {
+//   // Make a request to the Flask server to get the schools data
+//   fetch('/api/toronto_schools') 
+//     // Parse the response as JSON
+//     .then(response => response.json())
+//     .then(data => {
+//       // Call the function to add markers for the schools data
+//       addSchoolMarkers(data); 
+//     })
+//     // Logs errors, if any
+//     .catch(error => console.error('Error fetching data:', error)); 
+// }
 
 // Create function to add school markers based on the data fetched from the Flask App
 function addSchoolMarkers(response) {
@@ -205,19 +214,19 @@ function addSchoolMarkers(response) {
   }
 }
 
-// Create function to fetch subway stations data from the Flask App
-function fetchStations() {
-  // Make a request to the Flask server to get the stations data
-  fetch('/api/subway_stations') 
-    // Parse the response as JSON
-    .then(response => response.json()) 
-    .then(data => {
-      // Call the function to add markers for the stations data
-      addStationMarkers(data);
-    })
-    // Logs errors, if any
-    .catch(error => console.error('Error fetching data:', error)); 
-}
+// // Create function to fetch subway stations data from the Flask App
+// function fetchStations() {
+//   // Make a request to the Flask server to get the stations data
+//   fetch('/api/subway_stations') 
+//     // Parse the response as JSON
+//     .then(response => response.json()) 
+//     .then(data => {
+//       // Call the function to add markers for the stations data
+//       addStationMarkers(data);
+//     })
+//     // Logs errors, if any
+//     .catch(error => console.error('Error fetching data:', error)); 
+// }
 
 // Create function to add station markers based on the data fetched from the Flask App
 function addStationMarkers(data) {
@@ -239,19 +248,19 @@ function addStationMarkers(data) {
   };
 }
 
-// Create function to fetch attractions data from the Flask App
-function fetchAttractions() {
-  // Make a request to the Flask server to get the attractions data
-  fetch('/api/attractions')
-    // Parse the response as JSON
-    .then(response => response.json()) 
-    .then(data => {
-      // Call the function to add markers for the attractions data
-      addMarkersToMap(data); 
-    })
-    // Logs errors, if any
-    .catch(error => console.error('Error fetching data:', error)); 
-}
+// // Create function to fetch attractions data from the Flask App
+// function fetchAttractions() {
+//   // Make a request to the Flask server to get the attractions data
+//   fetch('/api/attractions')
+//     // Parse the response as JSON
+//     .then(response => response.json()) 
+//     .then(data => {
+//       // Call the function to add markers for the attractions data
+//       addMarkersToMap(data); 
+//     })
+//     // Logs errors, if any
+//     .catch(error => console.error('Error fetching data:', error)); 
+// }
 
 // Create function to add attractions markers using GeoJSON data
 function addMarkersToMap(data) {
@@ -297,7 +306,7 @@ map.on('overlayadd', function (eventLayer) {
 });
 
 // Call the properties function upon initial load
-document.addEventListener('DOMContentLoaded', fetchProperties);
+//document.addEventListener('DOMContentLoaded', fetchProperties);
 
 // Create a function to remove the overlays so only the properties are shown upon initial load
 function removeOverlayLayers() {
@@ -315,8 +324,13 @@ function displayDataInTable(data) {
   var tbody = document.querySelector('#property-table tbody');
   // Clear previous data
   tbody.innerHTML = ''; 
+
+  let propertyIds = new Set();
   // Populate the table information
   data.forEach(property => {
+    if (!propertyIds.has(property._id)) {
+      propertyIds.add(property._id);
+    console.log(data)
       var row = tbody.insertRow();
       var addressCell = row.insertCell(0);
       var countryCell = row.insertCell(1);
@@ -324,12 +338,13 @@ function displayDataInTable(data) {
       // Populate the table with the property information
       addressCell.textContent = property.address;
       countryCell.textContent = property.city;
-      postalcodeCell.textContent = property.postal_code;
+      postalcodeCell.textContent = property.zipcode;
       // Call the functions to display additional information based on the clicked row
       row.addEventListener('click', function() {
           selectRow(this,property);
           displayPropertyDetails(property);
       });
+    }
   });
 }
 
@@ -407,6 +422,8 @@ function displayPropertyDetails(property) {
 // Create a function to get form data from the HTML form element
 function getData(form) {
   var formData = new FormData(form);
+  var filters = Object.fromEntries(formData);
+  console.log("Form Data:", filters);
   // Call the function to get property information based on the HTML form filter
   fetchProperties(Object.fromEntries(formData));
 }
