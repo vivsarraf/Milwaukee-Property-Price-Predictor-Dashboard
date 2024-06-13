@@ -1,13 +1,13 @@
 # Miwaukee Listings Property Search Dashboard
 
-The goal of this project is to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
+This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
 
 1) The interactive dashboard will have only Milwaukee listings (28 properties) shown on the map, and contain information such as the address, number of bedrooms, number of bathrooms, square footage, lot size, and listing price.
-2) The dashboard will have a filtering interface to allow users to filter by: min and max price, number of beds and baths, and square footage, and results will be shown below the map in a tabular format. The tabular presentation will have the list of properties and their property information.
+2) The dashboard will have a filtering interface to allow users to filter by the minimum number of beds and results will be shown below the map in a tabular format. The tabular presentation will have the list of properties and their property information.
 3) Upon selecting a property from the list, additional information including the 2025 price predictions, will be shown below the table to aid users in the purchasing decisions. 
 
 ## Limitations: 
-- Due to limitations in sourcing datasets, the 2023 property listings extracted from Zillow will be filtered for properties in the City of Milwaukee only. While we were able to find a Zillow extract containing 2023 property listings for sale, we were not able to find a dataset containing historical house sales for all states in the US. 
+- Due to limitations in sourcing datasets, the 2023 property listings extracted from Zillow will be filtered for properties in the City of Milwaukee only. While we could find a Zillow extract containing 2023 property listings for sale, we could not find a dataset containing historical house sales for all states in the US. 
 - We were able to find a dataset containing historical house sales in Milwaukee from 2013 to 2023, which will be used to create our house price prediction model; however, it would be inaccurate for our model to be used to predict house prices for all the 2023 property listings taken from the Zillow extract given the geographic differences between the City of Milwaukee and all other cities in the US. Therefore, we have filtered the 2023 property listings to be shown on the map to only properties listed in Milwaukee to ensure the applicability and reliability of our house price prediction model for the dashboard. 
 
 ## Getting Started
