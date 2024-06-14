@@ -1,6 +1,6 @@
 # Milwaukee Listings Property Price Predictor Dashboard
 
-This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
+This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2025 property price prediction using machine learning concepts. 
 
 1) The interactive dashboard will have only Milwaukee listings (28 properties) shown on the map, and contain information such as the address, number of bedrooms, number of bathrooms, square footage, lot size, and listing price.
 2) The dashboard will have a filtering interface to allow users to filter by the minimum number of beds and results will be shown below the map in a tabular format. The tabular presentation will have the list of properties and their property information.
