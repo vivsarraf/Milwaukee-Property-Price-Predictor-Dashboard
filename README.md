@@ -1,4 +1,4 @@
-# Miwaukee Listings Property Search Dashboard
+# Milwaukee Listings Property Search Dashboard
 
 This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
 
@@ -13,21 +13,21 @@ This project aims to provide users with an interactive dashboard for Milwaukee p
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-To run this project, please set up your environment and run the files in the order of how the folders are number. The contents of the repo are outlined below:
+To run this project, please set up your environment and run the files in the order of how the folders are numbered. The contents of the repo are outlined below:
 ```
 .
 ├── 1. Data Cleaning
 |   └── Resources
 |       ├── 2013_to_2023_property-sales-data.csv                    # Original historical Milwaukee property sales data from 2013 to 2013 in csv format
-|       └── clean_property_data_SQL2.csv                            # Cleaned Milwaukee hstorical sales data using Python and SQLite          
+|       └── clean_property_data_SQL2.csv                            # Cleaned Milwaukee historical sales data using Python and SQLite          
 |   └── Final_SQL_data_cleaning_process.ipynb                       # Jupyter notebook file using SQLite to clean the historical sales data for model creation
 ├── 2. Model Creation
 |   └── Resources
-|       ├── clean_property_data_SQL2.csv                            # Cleaned Milwaukee hstorical sales data using Python and SQLite used for the model
-|       ├── final-listings-dataset-with-predictions.csv             # Output of 2023 Milwaukee property listings details containing uneditted 2025 price predictions
+|       ├── clean_property_data_SQL2.csv                            # Cleaned Milwaukee historical sales data using Python and SQLite used for the model
+|       ├── final-listings-dataset-with-predictions.csv             # Output of 2023 Milwaukee property listings details containing unedited 2025 price predictions
 |       ├── historicalsales-dummy-data.csv                          # Cleaned historical Milwaukee property sales data with categorial information transcribed as dummy data
 |       ├── listings-dummy-data.csv                                 # Cleaned 2023 Milwaukee property listings data with categorial information transcribed as dummy data
-|       ├── original_extracted_df_MilwaukeeOnly_June12.csv          # Original 2023 Milwaukee proeprty listings data
+|       ├── original_extracted_df_MilwaukeeOnly_June12.csv          # Original 2023 Milwaukee property listings data
 |       └── revised-final-listings-dataset-with-predictions.csv     # Revised final 2023 Milwaukee property listings details with revised 2025 price predictions for use in the UI
 |   └── Final_Project4_PredictionModel.ipynb 
 ├── 3. Dashboard Creation
@@ -44,8 +44,9 @@ To run this project, please set up your environment and run the files in the ord
 |   └── Data Cleaning and MongoDB Import                            # Jupyter ntoebook file used for importing data and cleaning before MongoDB creation
 ├── Images
 |   ├── Architecture diagram                                        # PNG image about project architecture
-|   ├── coafficient - p value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
+|   ├── coefficient - p value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
 |   └── feature importance                                          
+|── Presentation Slides - Milwaukee Property Listings Dashboard.pdf # Presentation slides about this Milwaukee properties dashboard and price prediction in pdf format
 ├── README.md                                                       # README file describing purpose, repo contents, setup requirements, and architecture of the project
 └── requirements.txt                                                # List of required libraries to install for app to work
 ```
@@ -113,34 +114,16 @@ With over 60 trials, several different models were tested in an attempt to obtai
 
 | Model Information  | Accuracies |
 | ------------- | ------------- |
-| Neural Network - 2 layers ("relu" activation; 32 nodes) and 1 output layer ("linear" activation) | Accuracy 0.0002  |
 | LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
-| Random Forest Regression | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
+| Random Forest Regressor | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
 
-Initially, a neural network with 2 layers and an output layer was used, with the final output activation function being set as "sigmoid." However, after some guidance and further research, it was understood that the "sigmoid" activation function should only be used for classification problems and cannot be used with forecasting problems, which explains the accuracy of 0%. After changing the output layer activation function to "linear," an accuracy of 0.02% was achieved  - not even close to the desired target performance of at least 75%.
+Initially, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
 
-Afterwards, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
-
-Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priorty were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occured when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-### And coding style tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
+Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priority were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occurred when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
 
 ## Deployment
 
 After running the code files in VSCode, Google Colab, or any other tool of choice, run 'python app.py' in the terminal to view and interact with the final User Interface - the dashboard should be found at 'http://127.0.0.1:5000/'. 
-<!-- Add additional notes about how to deploy this on a live system -->
 
 ## Built With
 
@@ -153,20 +136,7 @@ After running the code files in VSCode, Google Colab, or any other tool of choic
 ## Data Sources
 
 Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://data.milwaukee.gov/dataset/property-sales-data"> Milwaukee Open Data - City of Milwaukee Open Data Portal</a>. 
-
 2023 United States House Listings: Zillow Extract - taken from <a href= "https://www.kaggle.com/datasets/febinphilips/us-house-listings-2023"> Kaggle</a>. 
-
-<!-- * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds -->
-
-<!-- ## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us. -->
-
-<!-- ## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
 
 ## Authors
 
@@ -175,16 +145,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Vivek Sarraf** - *Full project cycle* - [Vivek's Github](https://github.com/vivsarraf)
 * **Ajunjee Selvam** - *Full project cycle* - [Ajunjee's Github](https://github.com/ajunjee-selvam)
 
-<!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
-
-<!-- ## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details -->
-
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thank you to the instructional staff of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
 
 
