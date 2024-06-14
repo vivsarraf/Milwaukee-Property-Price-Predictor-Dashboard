@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Milwaukee Listings Property Search Dashboard
+=======
+# Miwaukee Listings Property Pice Predictor Dashboard
+>>>>>>> 5ff51651e747901775533e48adea643c3e872da1
 
 This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
 
@@ -83,7 +87,7 @@ Execute 'pip install -r requirements.txt' to install all the packages within the
 
 **Definition**: In simple terms, a coefficient shows how much the sale price of a house changes when a feature (like the number of bedrooms or the size of the house) changes by one unit.
 
-The coefficients from our linear regression model tell us how different features affect the sale price. Positive numbers mean the feature increases the sale price, while negative numbers mean it decreases it. For example, the coefficient for 'finishedsqft' (size of the house) is 77.37, meaning that for every extra square foot, the price goes up by $77. Meanwhile, 'style_cottage' has a coefficient of -38387.13, meaning houses with this style tend to sell for $38,387 less.
+The coefficients from our linear regression model tell us how different features affect the sale price. Positive numbers mean the feature increases the sale price, while negative numbers mean it decreases it.
 
 ### P-Values
 
@@ -117,9 +121,29 @@ With over 60 trials, several different models were tested in an attempt to obtai
 | LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
 | Random Forest Regressor | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
 
+<<<<<<< HEAD
 Initially, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
 
 Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priority were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occurred when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
+=======
+We started the baseline with a linear regression approach. To understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
+
+Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priorty were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occured when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
+
+<!-- Explain what these tests test and why
+
+```
+Give an example
+``` -->
+
+### And coding style tests
+
+<!-- Explain what these tests test and why
+
+```
+Give an example
+``` -->
+>>>>>>> 5ff51651e747901775533e48adea643c3e872da1
 
 ## Deployment
 
@@ -147,6 +171,12 @@ Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://
 
 ## Acknowledgments
 
+<<<<<<< HEAD
 * Thank you to the instructional staff of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
 
 
+=======
+* Hat tip to anyone whose code was used
+* Inspiration
+  
+>>>>>>> 5ff51651e747901775533e48adea643c3e872da1
