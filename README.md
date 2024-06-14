@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Milwaukee Listings Property Search Dashboard
-=======
-# Miwaukee Listings Property Pice Predictor Dashboard
->>>>>>> 5ff51651e747901775533e48adea643c3e872da1
+# Milwaukee Listings Property Price Predictor Dashboard
 
 This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
 
@@ -45,7 +41,7 @@ To run this project, please set up your environment and run the files in the ord
 |   └── templates
 |           └──  index.html                                         # Html template for rendering user dashboard with form, table, and maps
 |   ├── App.py                                                      # Flask app to create connections to the MongoDB collection and host the server                 
-|   └── Data Cleaning and MongoDB Import                            # Jupyter ntoebook file used for importing data and cleaning before MongoDB creation
+|   └── Data Cleaning and MongoDB Import                            # Jupyter notebook file used for importing data and cleaning before MongoDB creation
 ├── Images
 |   ├── Architecture diagram                                        # PNG image about project architecture
 |   ├── coefficient - p value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
@@ -118,32 +114,12 @@ With over 60 trials, several different models were tested in an attempt to obtai
 
 | Model Information  | Accuracies |
 | ------------- | ------------- |
-| LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
+| Linear Regression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
 | Random Forest Regressor | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
 
-<<<<<<< HEAD
-Initially, a linear regression approach was used instead. In order to understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
-
-Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priority were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occurred when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
-=======
 We started the baseline with a linear regression approach. To understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
 
-Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priorty were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occured when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-### And coding style tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
->>>>>>> 5ff51651e747901775533e48adea643c3e872da1
+Our last attempt involved use a random forest regressor model. To further analyze the importance of the features on the sale price, a feature importances diagram was created showing which values had the greatest significance in the prediction. Using this diagram, different number of input features in order of priority were tested to evaluate the differences in the model performance. Ultimately, it was noted that the best performance occurred when all 53 of the input features were fed into the model, resulting in an accuracy of 83.65%. With the target accuracy achieved, the random forest regression model was then applied on the 2023 Milwaukee listings data to estimate the 2025 forecasted house price. 
 
 ## Deployment
 
@@ -171,12 +147,6 @@ Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://
 
 ## Acknowledgments
 
-<<<<<<< HEAD
 * Thank you to the instructional staff of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
 
 
-=======
-* Hat tip to anyone whose code was used
-* Inspiration
-  
->>>>>>> 5ff51651e747901775533e48adea643c3e872da1
