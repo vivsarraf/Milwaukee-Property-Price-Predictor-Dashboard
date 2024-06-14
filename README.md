@@ -20,7 +20,7 @@ To run this project, please set up your environment and run the files in the ord
 |   └── Resources
 |       ├── 2013_to_2023_property-sales-data.csv                    # Original historical Milwaukee property sales data from 2013 to 2013 in csv format
 |       └── clean_property_data_SQL2.csv                            # Cleaned Milwaukee historical sales data using Python and SQLite          
-|   └── Final_SQL_data_cleaning_process.ipynb                       # Jupyter notebook file using SQLite to clean the historical sales data for model creation
+|   └── SQL_Data_Cleaning.ipynb                                     # Jupyter notebook file using SQLite to clean the historical sales data for model creation
 ├── 2. Model Creation
 |   └── Resources
 |       ├── clean_property_data_SQL2.csv                            # Cleaned Milwaukee historical sales data using Python and SQLite used for the model
@@ -29,7 +29,7 @@ To run this project, please set up your environment and run the files in the ord
 |       ├── listings-dummy-data.csv                                 # Cleaned 2023 Milwaukee property listings data with categorial information transcribed as dummy data
 |       ├── original_extracted_df_MilwaukeeOnly_June12.csv          # Original 2023 Milwaukee property listings data
 |       └── revised-final-listings-dataset-with-predictions.csv     # Revised final 2023 Milwaukee property listings details with revised 2025 price predictions for use in the UI
-|   └── Final_Project4_PredictionModel.ipynb 
+|   └── Project4_PredictionModel.ipynb                              # Jupyter notebook file containing the model training and 2025 Milwaukee price predictions
 ├── 3. Dashboard Creation
 |   └── Resources
 |       └── revised-final-listings-dataset-with-predictions.csv     # Revised final 2023 Milwaukee property listings details with revised 2025 price predictions for use in the UI
@@ -41,7 +41,7 @@ To run this project, please set up your environment and run the files in the ord
 |   └── templates
 |           └──  index.html                                         # Html template for rendering user dashboard with form, table, and maps
 |   ├── App.py                                                      # Flask app to create connections to the MongoDB collection and host the server                 
-|   └── Data Cleaning and MongoDB Import                            # Jupyter notebook file used for importing data and cleaning before MongoDB creation
+|   └── Data_Cleaning_MongoDB_Import                                # Jupyter notebook file used for importing data and cleaning before MongoDB creation
 ├── Images
 |   ├── Architecture - Milwaukee Property Listings Dashboard        # PNG image about project architecture
 |   ├── Coefficient - P Value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
