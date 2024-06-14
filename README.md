@@ -1,8 +1,8 @@
 # Milwaukee Listings Property Price Predictor Dashboard
 
-This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
+This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2025 property price prediction using machine learning concepts. 
 
-1) The interactive dashboard will have only Milwaukee listings (28 properties) shown on the map, and contain information such as the address, number of bedrooms, number of bathrooms, square footage, lot size, and listing price.
+1) The interactive dashboard will have only Milwaukee listings (24 properties) shown on the map, and contain information such as the address, number of bedrooms, number of bathrooms, square footage, lot size, and listing price.
 2) The dashboard will have a filtering interface to allow users to filter by the minimum number of beds and results will be shown below the map in a tabular format. The tabular presentation will have the list of properties and their property information.
 3) Upon selecting a property from the list, additional information including the 2025 price predictions, will be shown below the table to aid users in the purchasing decisions. 
 
@@ -136,6 +136,7 @@ After running the code files in VSCode, Google Colab, or any other tool of choic
 ## Data Sources
 
 Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://data.milwaukee.gov/dataset/property-sales-data"> Milwaukee Open Data - City of Milwaukee Open Data Portal</a>. 
+
 2023 United States House Listings: Zillow Extract - taken from <a href= "https://www.kaggle.com/datasets/febinphilips/us-house-listings-2023"> Kaggle</a>. 
 
 ## Authors
@@ -147,6 +148,6 @@ Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://
 
 ## Acknowledgments
 
-* Thank you to the instructional staff of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
+* Thank you to the instructional team of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
 
 
