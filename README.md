@@ -136,6 +136,7 @@ After running the code files in VSCode, Google Colab, or any other tool of choic
 ## Data Sources
 
 Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://data.milwaukee.gov/dataset/property-sales-data"> Milwaukee Open Data - City of Milwaukee Open Data Portal</a>. 
+
 2023 United States House Listings: Zillow Extract - taken from <a href= "https://www.kaggle.com/datasets/febinphilips/us-house-listings-2023"> Kaggle</a>. 
 
 ## Authors
