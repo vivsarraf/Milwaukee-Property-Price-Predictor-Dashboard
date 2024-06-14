@@ -92,7 +92,7 @@ The coefficients from our linear regression model tell us how different features
 P-values help us see which features really matter for predicting the sale price. If a feature has a low p-value (usually less than 0.05), it means this feature is probably important. For example, the feature 'finishedsqft' has a very low p-value, showing that its impact on the sale price is significant.
 
 <p align="center">
-  <img src="https://github.com/vivsarraf/Project-4/blob/main/images/coafficient%20-%20p%20value.png" style="width: 500px; height: auto;">
+  <img src="https://github.com/vivsarraf/Project-4/blob/main/images/Coefficient%20-%20P%20Value.png" style="width: 500px; height: auto;">
 </p>
 
 ### Feature Importance
@@ -101,7 +101,7 @@ P-values help us see which features really matter for predicting the sale price.
 
 In the Random Forest model, feature importance tells us which features are the most useful for predicting the sale price. It is calculated by seeing how much each feature reduces uncertainty in the model. For example, 'finishedsqft' is the most important feature, followed by 'year_built' and 'lotsize'. This means these features are key to predicting how much a house will sell for.
 <p align="center">
- <img src="https://github.com/vivsarraf/Project-4/blob/main/images/feature%20importance.png?raw=true" style="width: 850px; height: auto;">
+ <img src="https://github.com/vivsarraf/Project-4/blob/main/images/Feature%20Importance.png?raw=true" style="width: 850px; height: auto;">
 </p>
 
 ### Importance in Modeling
