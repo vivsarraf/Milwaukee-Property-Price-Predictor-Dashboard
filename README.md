@@ -1,6 +1,6 @@
 
 
-# Miwaukee Listings Property Price Predictor Dashboard
+# Milwaukee Listings Property Price Predictor Dashboard
 
 This project aims to provide users with an interactive dashboard for Milwaukee property listings that also provides the 2024 property price prediction using machine learning concepts. 
 
