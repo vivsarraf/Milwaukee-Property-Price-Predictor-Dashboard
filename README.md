@@ -148,6 +148,6 @@ Individual Property Sales Data from 2013 to 2023 - taken from <a href= "https://
 
 ## Acknowledgments
 
-* Thank you to the instructional staff of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
+* Thank you to the instructional team of the 2023 UofT Data Analytics cohort - this project would not have been completed without their guidance and support. 
 
 
