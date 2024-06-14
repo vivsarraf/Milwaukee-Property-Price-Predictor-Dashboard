@@ -82,7 +82,7 @@ Execute 'pip install -r requirements.txt' to install all the packages within the
 
 **Definition**: In simple terms, a coefficient shows how much the sale price of a house changes when a feature (like the number of bedrooms or the size of the house) changes by one unit.
 
-The coefficients from our linear regression model tell us how different features affect the sale price. Positive numbers mean the feature increases the sale price, while negative numbers mean it decreases it. For example, the coefficient for 'finishedsqft' (size of the house) is 77.37, meaning that for every extra square foot, the price goes up by $77. Meanwhile, 'style_cottage' has a coefficient of -38387.13, meaning houses with this style tend to sell for $38,387 less.
+The coefficients from our linear regression model tell us how different features affect the sale price. Positive numbers mean the feature increases the sale price, while negative numbers mean it decreases it.
 
 ### P-Values
 
