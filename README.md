@@ -64,7 +64,7 @@ scikit-learn=1.5.0=pypi_0
 
 ### Installing
 
-Before running the code file, the environment will need to be updated with the relevant packages outlined in the requirements.txt file used for this project. To setup a new environment for this project, please see below:
+Before running the code file, the environment will need to be updated with the relevant packages outlined in the Requirements.txt file used for this project. To setup a new environment for this project, please see below:
 
 ```
 Open a new terminal
@@ -92,7 +92,7 @@ The coefficients from our linear regression model tell us how different features
 P-values help us see which features really matter for predicting the sale price. If a feature has a low p-value (usually less than 0.05), it means this feature is probably important. For example, the feature 'finishedsqft' has a very low p-value, showing that its impact on the sale price is significant.
 
 <p align="center">
-  <img src="https://github.com/vivsarraf/Project-4/blob/main/images/coafficient%20-%20p%20value.png" style="width: 500px; height: auto;">
+  <img src="https://github.com/vivsarraf/Project-4/blob/main/images/Coefficient%20-%20P%20Value.png" style="width: 500px; height: auto;">
 </p>
 
 ### Feature Importance
@@ -101,7 +101,7 @@ P-values help us see which features really matter for predicting the sale price.
 
 In the Random Forest model, feature importance tells us which features are the most useful for predicting the sale price. It is calculated by seeing how much each feature reduces uncertainty in the model. For example, 'finishedsqft' is the most important feature, followed by 'year_built' and 'lotsize'. This means these features are key to predicting how much a house will sell for.
 <p align="center">
- <img src="https://github.com/vivsarraf/Project-4/blob/main/images/feature%20importance.png?raw=true" style="width: 850px; height: auto;">
+ <img src="https://github.com/vivsarraf/Project-4/blob/main/images/Feature%20Importance.png?raw=true" style="width: 850px; height: auto;">
 </p>
 
 ### Importance in Modeling
@@ -115,7 +115,7 @@ With over 60 trials, several different models were tested in an attempt to obtai
 | Model Information  | Accuracies |
 | ------------- | ------------- |
 | Linear Regression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
-| Random Forest Regressor | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
+| Random Forest Regressor | Accuracy 0.8353545121337147; Mean Squared Error: 1508305090.2988617 |
 
 We started the baseline with a linear regression approach. To understand the correlations of the feature against the sales price, and the significance of the input on the sales price, the coefficients summary and p-values were calculated. A total of 53 input features (columns) were used. It was decided to include as many input features as possible to include the factors affecting house prices into the model as much as possible to try and address the wide disparity in the correlations and the low p-values. Using the linear regression model, an accuracy of 60.07% was received, which was significantly better than the neural network, but still not at the target performance of at least 75%.
 
