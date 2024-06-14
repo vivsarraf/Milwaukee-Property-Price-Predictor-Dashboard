@@ -48,7 +48,7 @@ To run this project, please set up your environment and run the files in the ord
 |   └── Feature Importance                                          # Feature importance graph to visualize which features have the greatest impact in the random forest regressor model
 |── Presentation Slides - Milwaukee Property Listings Dashboard.pdf # Presentation slides about this Milwaukee properties dashboard and price prediction in pdf format
 ├── README.md                                                       # README file describing purpose, repo contents, setup requirements, and architecture of the project
-└── requirements.txt                                                # List of required libraries to install for app to work
+└── Requirements.txt                                                # List of required libraries to install for app to work
 ```
 
 ### Prerequisites and Libraries
@@ -72,7 +72,7 @@ Execute 'conda env list' to see whether a suitable environment has already been 
 Execute 'conda create --name milwaukee_env' to create a new conda environment called "milwaukee_env." Input 'y' if prompted.
 Execute 'conda env list' to confirm whether the 'milwaukee_env' environment has been successfully created.
 Execute 'conda list' to see the packages already loaded into this environment.
-Execute 'pip install -r requirements.txt' to install all the packages within the requriements.txt file. 
+Execute 'pip install -r Requirements.txt' to install all the packages within the requriements.txt file. 
 ```
 ## Project Architecture
 ![Architecture - Milwaukee Property Listings Dashboard](<images/Architecture - Milwaukee Property Listings Dashboard.jpg>)
