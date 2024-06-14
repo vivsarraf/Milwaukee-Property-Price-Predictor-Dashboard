@@ -64,7 +64,7 @@ scikit-learn=1.5.0=pypi_0
 
 ### Installing
 
-Before running the code file, the environment will need to be updated with the relevant packages outlined in the requirements.txt file used for this project. To setup a new environment for this project, please see below:
+Before running the code file, the environment will need to be updated with the relevant packages outlined in the Requirements.txt file used for this project. To setup a new environment for this project, please see below:
 
 ```
 Open a new terminal
