@@ -43,9 +43,9 @@ To run this project, please set up your environment and run the files in the ord
 |   ├── App.py                                                      # Flask app to create connections to the MongoDB collection and host the server                 
 |   └── Data Cleaning and MongoDB Import                            # Jupyter notebook file used for importing data and cleaning before MongoDB creation
 ├── Images
-|   ├── Architecture diagram                                        # PNG image about project architecture
-|   ├── coefficient - p value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
-|   └── feature importance                                          
+|   ├── Architecture - Milwaukee Property Listings Dashboard        # PNG image about project architecture
+|   ├── Coefficient - P Value                                       # Feature correlation table summarizing how sale price changes for each input feature and their significance 
+|   └── Feature Importance                                          # Feature importance graph to visualize which features have the greatest impact in the random forest regressor model
 |── Presentation Slides - Milwaukee Property Listings Dashboard.pdf # Presentation slides about this Milwaukee properties dashboard and price prediction in pdf format
 ├── README.md                                                       # README file describing purpose, repo contents, setup requirements, and architecture of the project
 └── requirements.txt                                                # List of required libraries to install for app to work
