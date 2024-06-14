@@ -113,7 +113,7 @@ With over 60 trials, several different models were tested in an attempt to obtai
 
 | Model Information  | Accuracies |
 | ------------- | ------------- |
-
+| Neural Network - 2 layers ("relu" activation; 32 nodes) and 1 output layer ("linear" activation) | Accuracy 0.0002  |
 | LinearRegression  | Accuracy 0.6007207053344369; Mean Squared Error: 3657767974.0856624 |
 | Random Forest Regression | Accuracy 0.8365494245555989; Mean Squared Error: 1497358586.317818 |
 
